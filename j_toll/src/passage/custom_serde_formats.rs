@@ -1,16 +1,4 @@
-use chrono::{NaiveDate, NaiveTime};
-use serde::Deserialize;
-
-#[derive(Deserialize, Debug)]
-pub struct Passage {
-    checkpoint_id: usize,
-    #[serde(with = "my_date_format")]
-    date: NaiveDate,
-    #[serde(with = "my_time_format")]
-    time: NaiveTime,
-}
-
-mod my_date_format {
+pub mod my_date_format {
     use chrono::NaiveDate;
     use serde::{self, Deserialize, Deserializer};
 
@@ -24,7 +12,8 @@ mod my_date_format {
         NaiveDate::parse_from_str(&s, FORMAT).map_err(serde::de::Error::custom)
     }
 }
-mod my_time_format {
+
+pub mod my_time_format {
     use chrono::NaiveTime;
     use serde::{self, Deserialize, Deserializer};
 
