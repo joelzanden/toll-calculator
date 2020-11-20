@@ -1,4 +1,5 @@
 mod cli;
+mod passage;
 mod vehicle;
 
 use vehicle::Vehicle;
