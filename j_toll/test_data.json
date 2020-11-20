@@ -3,14 +3,17 @@
     "vehicle_type": "car",
     "passages": [
         {
+            "checkpoint_id": 654,
             "date": "2020-11-17",
             "time": "08:00"
         },
         {
+            "checkpoint_id": 650,
             "date": "2020-11-17",
             "time": "10:00"
         },
         {
+            "checkpoint_id": 14,
             "date": "2020-11-17",
             "time": "10:07"
         }

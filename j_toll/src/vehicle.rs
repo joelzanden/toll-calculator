@@ -11,6 +11,7 @@ pub struct Vehicle {
 
 #[derive(Deserialize, Debug)]
 pub struct Passage {
+    checkpoint_id: usize,
     #[serde(with = "my_date_format")]
     date: NaiveDate,
     #[serde(with = "my_time_format")]
